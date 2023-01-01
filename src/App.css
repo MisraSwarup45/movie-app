@@ -26,3 +26,9 @@
 .mrm{
   margin-left: 20vh;
 }
+
+.image{
+  height: 50px;
+  width: 50px;
+  margin-left: 2rem;
+}

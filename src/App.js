@@ -3,9 +3,9 @@ import './App.css';
 import MovieElement from './MovieElement';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar,Container,Nav,Form, FormControl,Button } from 'react-bootstrap';
-import logo from "./images/logo.svg";
+import logo from "./images/2.png";
 
-const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`;
+const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=6a68782ee2dbc101c5bac7380ad55b60&language=en-US&page=1`;
 
 function App() {
   const [movies, setMovies]=useState([]);
@@ -25,7 +25,7 @@ function App() {
     e.preventDefault();
     console.log("Searching");
     try{
-      const url=`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${query}`;
+      const url=`https://api.themoviedb.org/3/search/movie?api_key=6a68782ee2dbc101c5bac7380ad55b60&query=${query}`;
       const res= await fetch(url);
       const data= await res.json();
       console.log(data);
@@ -43,7 +43,7 @@ function App() {
     <>
     <Navbar expand="lg" variant="dark">
       <Container fluid>
-        <Navbar.Brand href="/"><img src={logo}></img></Navbar.Brand>
+        <Navbar.Brand href="/"><img src={logo} className="image"></img></Navbar.Brand>
             <Nav 
             className="me-auto my-2 my-lg-3"
             style={{maxHeight:'100px'}}
